@@ -94,13 +94,21 @@ namespace RaspberryGPIOManager
             }
         }
 
-        private GPIOState _gpioValue;
         /// <summary>
         /// The current value of a GPIO pin.
         /// </summary>
         public GPIOState State
         {
-            get { return _gpioValue; }
+            get
+            {
+                if (_disposed)
+                    throw new ObjectDisposedException("Selected pin has been disposed.");
+                else
+                {
+                    string state = File.ReadAllText(String.Format("{0}gpio{1}/value", GPIO_ROOT_DIR, GPIOPin.ToString().Substring(4)));
+                    return (state == "1" ? GPIOState.High : GPIOState.Low);
+                }
+            }
             set
             {
                 if (_disposed)
@@ -110,7 +118,6 @@ namespace RaspberryGPIOManager
                 else
                 {
                     File.WriteAllText(String.Format("{0}gpio{1}/value", GPIO_ROOT_DIR, GPIOPin.ToString().Substring(4)), (value == GPIOState.High ? "1" : "0"));
-                    _gpioValue = value;
                 }
             }
         }
