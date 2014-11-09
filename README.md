@@ -36,8 +36,11 @@ Notes
 -------------------------------
 GPIOPinDriver class implements IDisposable interface, that is to say it should be disposed at the end, calling either `Dispose()` or `Unexport()` function.
 
+**IMPORTANT**: Accessing GPIO pins require root permissions!
+
 
 
 Have fun,
+
 Alex
          
