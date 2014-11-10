@@ -42,8 +42,5 @@ GPIOPinDriver class implements IDisposable interface, that is to say it should b
 **IMPORTANT**: Accessing GPIO pins require root permissions!
 
 
-
-Have fun,
-
-Alex
-         
+---
+*Raspberry Pi is a trademark of the Raspberry Pi Foundation.*
