@@ -37,6 +37,7 @@ Once you have created your object(s), you can access following properties:
 Coming Soon
 --------------------------------
 - Possibility to handle events on GPIO pin state changes
+- Object to handle serial communication
 
 
 Notes
