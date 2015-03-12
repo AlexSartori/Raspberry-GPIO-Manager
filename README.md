@@ -34,6 +34,10 @@ Once you have created your object(s), you can access following properties:
              in input mode to read the value of it (High/Low).
 
 
+Coming Soon
+--------------------------------
+- Possibility to handle events on GPIO pin state changes
+
 
 Notes
 -------------------------------
