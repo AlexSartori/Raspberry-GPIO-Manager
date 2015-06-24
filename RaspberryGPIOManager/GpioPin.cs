@@ -67,7 +67,7 @@ namespace RaspberryGPIOManager
                         throw new PinAlreadyExportedException("Requested pin is already exported.");
                     else
                     {                                                                                       //  0  1  2  3  4  5
-                        File.WriteAllText(GPIO_ROOT_DIR + "export", GPIOPin.ToString().Substring(4));       //  G  P  I  O  8
+                        File.WriteAllText(GPIO_ROOT_DIR + "export", value.ToString().Substring(4));       //  G  P  I  O  8
                         _exported_pins.Add(value);
                         _gpioPin = value;  
                     }
