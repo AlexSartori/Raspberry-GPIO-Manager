@@ -106,7 +106,7 @@ namespace RaspberryGPIOManager
                 else
                 {
                     string state = File.ReadAllText(String.Format("{0}gpio{1}/value", GPIO_ROOT_DIR, GPIOPin.ToString().Substring(4)));
-                    return (state == "1" ? GPIOState.High : GPIOState.Low);
+                    return (state[0] == "1" ? GPIOState.High : GPIOState.Low);
                 }
             }
             set
@@ -149,7 +149,10 @@ namespace RaspberryGPIOManager
             _disposed = false;
             this.GPIOPin = gpioPin;
             this.Direction = direction;
-            this.State = initialValue;
+            
+            if (this.Direction == GPIODirection.Out) {
+                this.State = initialValue;
+            }
         }
 
 
@@ -158,7 +161,7 @@ namespace RaspberryGPIOManager
         /// </summary>
         public void Unexport()
         {
-		    if (!_disposed)
+	    if (!_disposed)
                 Dispose();
         }
 
@@ -174,7 +177,7 @@ namespace RaspberryGPIOManager
 
         ~GPIOPinDriver()
         {
-		    if (!_disposed)
+            if (!_disposed)
                 Dispose();
         }
     }
