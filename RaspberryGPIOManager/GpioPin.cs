@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.IO;
 
@@ -106,7 +106,7 @@ namespace RaspberryGPIOManager
                 else
                 {
                     string state = File.ReadAllText(String.Format("{0}gpio{1}/value", GPIO_ROOT_DIR, GPIOPin.ToString().Substring(4)));
-                    return (state[0] == "1" ? GPIOState.High : GPIOState.Low);
+                    return (state[0] == '1' ? GPIOState.High : GPIOState.Low);
                 }
             }
             set
