@@ -16,9 +16,9 @@ GPIOPinDriver object
 The GPIOPinDriver object is the one you need to build in order to perform any action.
 In its constructor you have to specify the GPIO pin to associate, and you may also want to give the direction and the initial value to assign.
 
-`var pin1 = new GPIOPinDriver(GPIOPinDriver.Pin.GPIO23);`
+    var pin1 = new GPIOPinDriver(GPIOPinDriver.Pin.GPIO23);
 
-`var pin2 = new GPIOPinDriver(GPIOPinDriver.Pin.GPIO23, GPIOPinDriver.GPIODirection.Out, GPIOPinDriver.GPIOState.Low);`
+    var pin2 = new GPIOPinDriver(GPIOPinDriver.Pin.GPIO23, GPIOPinDriver.GPIODirection.Out, GPIOPinDriver.GPIOState.Low);
 
 
 
@@ -34,6 +34,19 @@ Once you have created your object(s), you can access following properties:
              in input mode to read the value of it (High/Low).
 
 
+GPIOMode property to dimm and flick
+-------------------------------
+###### Contribution by [@Huakus](https://github.com/Huakus)
+
+    // To flick:
+    pin1.GPIOMode = GPIOPinDriver.GPIOMode.Flicker;
+    pin1.FlickMilliseconds = 500;
+
+    // To dimm:
+    pin2.GPIOMode = GPIOPinDriver.GPIOMode.Dimmer;
+    pin2.DimmPercent = 25;
+
+
 Coming Soon
 --------------------------------
 - Possibility to handle events on GPIO pin state changes
@@ -44,7 +57,7 @@ Notes
 -------------------------------
 GPIOPinDriver class implements IDisposable interface, that is to say it should be disposed at the end, calling either `Dispose()` or `Unexport()` function.
 
-**IMPORTANT**: Accessing GPIO pins require root permissions!
+**IMPORTANT**: Accessing GPIO pins requires root permissions!
 
 
 ---
