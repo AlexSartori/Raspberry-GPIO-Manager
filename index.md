@@ -1,9 +1,6 @@
-<h1 style="display: inline; color:red">
-RaspberryGPIOManager  &nbsp;
- <a href="http://www.raspberrypi.org">
-  <img src="http://www.raspberrypi.org/wp-content/uploads/2012/03/Raspi_Colour_R.png" height="70" alt="raspberrypi.org" align="bottom">
- </a>
-</h1>
+<img src="http://www.raspberrypi.org/wp-content/uploads/2012/03/Raspi_Colour_R.png" alt="raspberrypi.org">
+
+# RaspberryGPIOManager
 
 This simple C# library allows you to easily manage any GPIO pin on your Raspberry Pi.
 If you wish to learn more about GPIO, you may want to look at [this](http://elinux.org/RPi_Low-level_peripherals "Low-Level peripherals reference").
