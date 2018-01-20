@@ -11,6 +11,21 @@ To see an example on how the library works, see below.
 
 ***
 
+*Notice:* I'm currently performing major changes to the code and the repository. Sorry if I'll mess up and break some source files.
+
+
+
+Compiling
+-------------------------------
+If you're keeping your RPi setup as lightweight as possible and you're not using an IDE you can compile this library and your project as follows:
+
+`mcs -t:library GpioPin.cs Exceptions.cs -out:Raspberry-GPIO-Manager.dll`
+
+
+`mcs -reference:"path/to/previous/generated.dll" yourProject.cs`
+
+
+
 GPIOPinDriver object
 -------------------------------
 The GPIOPinDriver object is the one you need to build in order to perform any action.
