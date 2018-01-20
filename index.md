@@ -1,4 +1,4 @@
-<img src="http://www.raspberrypi.org/wp-content/uploads/2012/03/Raspi_Colour_R.png" alt="raspberrypi.org">
+![raspberrypi.org]("http://www.raspberrypi.org/wp-content/uploads/2012/03/Raspi_Colour_R.png" "raspberrypi.org"){:height="40px"}
 
 # RaspberryGPIOManager
 
